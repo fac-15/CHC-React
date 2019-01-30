@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint src/",
     "test": "jest --watch",
-    "dev": "parcel index.html",
+    "dev": "parcel public/index.html",
     "build": "parcel build index.html"
   },
   "keywords": [],
