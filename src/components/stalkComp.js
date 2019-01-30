@@ -11,7 +11,7 @@ export default class StalkComp extends React.Component {
   render() {
     return (
       <div>
-        <p> {this.state.count} </p>
+  
       </div>
     )
   }
