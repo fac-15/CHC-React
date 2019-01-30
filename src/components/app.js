@@ -1,5 +1,7 @@
 import React from 'react';
+import StalkComp from './stalkComp';
 import LeafComp from './leafComp';
+import FlowerComp from './flowerComp';
 // import PlantPotComp from './plantPotComp';
 export default class App extends React.Component {
   state = {
@@ -9,7 +11,24 @@ export default class App extends React.Component {
     count: 0,
     timer: 0,
     timerId: 0
+
+
+export default class App extends React.Component {
+  state = {
+    stalk: 0,
+    hello: 'im working'
   }
+  start = () => {
+
+      //Space bar key code below
+      // if(e.keyCode = 32) {
+      //
+      // }
+
+        this.setState((prevState) => {
+          return { count: prevState.count += 1}
+        })
+    }
 
   render() {
     return (
@@ -17,13 +36,10 @@ export default class App extends React.Component {
         <LeafComp />
         <p> leaf {this.state.leaf}</p>
         <p> count {this.state.count}</p>
-        <button
-          onClick= {() =>
-            this.setState(prevState => {
-              return { count: prevState.count += 1 }})
-          }
-        > click </button>
+        <button onClick={this.start}>Click</button>
+        <StalkComp />
+        <FlowerComp />
       </div>
-    )
+    );
   }
 }
