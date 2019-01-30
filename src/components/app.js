@@ -1,15 +1,19 @@
 import React from 'react';
+import StalkComp from './stalkComp';
+import FlowerComp from './flowerComp';
 
 export default class App extends React.Component {
   state = {
-    flower: 'Hello, i\'m a flower'
+    stalk: 0,
+    hello: 'im working'
   }
 
   render() {
     return (
       <div>
-        <p>{this.props.flower}</p>
+        <StalkComp />
+        <FlowerComp />
       </div>
-    )
+    );
   }
 }
