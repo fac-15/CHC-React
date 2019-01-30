@@ -11,13 +11,8 @@ export default class App extends React.Component {
     count: 0,
     timer: 0,
     timerId: 0
-
-
-export default class App extends React.Component {
-  state = {
-    stalk: 0,
-    hello: 'im working'
   }
+
   start = () => {
 
       //Space bar key code below
