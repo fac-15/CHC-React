@@ -8,23 +8,10 @@ export default class StalkComp extends React.Component {
     timer: 0
   };
 
-  start = () => {
-
-    //Space bar key code below
-    // if(e.keyCode = 32) {
-    //
-    // }
-
-      this.setState((prevState) => {
-        return { count: prevState.count += 1}
-      })
-  }
-
   render() {
     return (
       <div>
         <p> {this.state.count} </p>
-        <button onClick={this.start}>Click</button>
       </div>
     )
   }
