@@ -1,8 +1,8 @@
 import React from 'react';
 
-class LeafComp extends React.Component {
+export default class LeafComp extends React.Component {
   state = {
-    count : 0,
+    count : 667,
     toggle: false
   }
   render(){
@@ -10,12 +10,10 @@ class LeafComp extends React.Component {
     // if (this.state.count === App.state.count){
     //   this.setState({ toggle: true });
     // }
-    console.log(this.state.count);
+    //
 
   return(
-    <div></div>
+    <div> </div> 
   )
 }
 }
-
-export default LeafComp;

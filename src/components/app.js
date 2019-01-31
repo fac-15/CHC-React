@@ -10,7 +10,7 @@ export default class App extends React.Component {
     stalk: 0,
     leaf: 0,
     flower: 0,
-    count: 0,
+    totalCount: 0,
     timer: 0,
     timerId: 0,
     active: false
@@ -18,32 +18,21 @@ export default class App extends React.Component {
 
   start = () => {
 
-    const counter = () => {
+    const timer = () => {
       this.setState((prevState) => {
-        // console.log('im clicked');
-        return { count: prevState.timer +=1 }
+        return { timer: prevState.timer +=1 }
       })
     }
 
     if(!this.state.active) {
-      this.setState((prevState) => {
-        const id = setInterval(counter, 1000)
+      this.setState(() => {
+        const id = setInterval(timer, 1000)
         return { active: true, timerId: id };
       })
     }
-
-        // this.setState((prevState) => {
-        //   // e = event.window.target;
-        //   // onKeypress = ()
-        //     return { count: prevState.count += 1}
-        // })
   }
 
-    // onKeyPress(e){
-    //   console.log(e.key);
-    // }
 
-    // onClick={(e) => this.onKeyPress(e)}
 
   render() {
     return (
