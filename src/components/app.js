@@ -7,7 +7,7 @@ import CloudComp from "./cloudComp";
 
 export default class App extends React.Component {
   state = {
-    stalk: 0,
+    stalks: 0,
     leaf: 0,
     flower: 0,
     totalCount: 0,
@@ -30,6 +30,12 @@ export default class App extends React.Component {
       });
     };
 
+    // const updateStalks = () => {
+    //   if (this.state.totalCount % 3 === 0) {
+    //     this.setState({ stalks: this.state.stalks + 1 });
+    //   }
+    // };
+
     if (!this.state.active) {
       this.setState(() => {
         const id = setInterval(timer, 1000);
@@ -42,25 +48,26 @@ export default class App extends React.Component {
     this.setState({ totalCount: this.state.totalCount + 1 });
   };
 
-
   render() {
-    const stalks = Array.from({length:9})
+    const stalks = Array.from({
+      length: Math.floor(this.state.totalCount / 3)
+    });
 
     return (
       <div>
         <p className="timer"> timer: {this.state.timer}</p>
         <p className="timer"> points: {this.state.totalCount}</p>
+        <p className="timer"> stalks: {this.state.stalks}</p>
         <button onClick={this.start}>Begin</button>
         <button onClick={this.pointCounter}>Water Me!</button>
         <div className="container">
           <CloudComp />
-          <div></div>
+          <div />
           <FlowerComp />
           <LeafComp />
           {stalks.map((stalk, id) => (
             <StalkComp id={id} />
-          )
-          )}
+          ))}
           <PlantPotComp />
         </div>
       </div>
