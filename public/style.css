@@ -1,13 +1,26 @@
 body {
-  background-color: #ccc;
+  background-color: #2A2D43;
+}
+.timer {
+  font-size: 1.3rem;
+  color: #EAC350;
+  font-family: 'Press Start 2P', cursive;
+}
+.container {
+  background-color: #77C2E5;
+  width: 60%;
+  height: 600px;
+  max-height: 600px;
+  display: block;
+  margin: 30px auto;
 }
 
 .stalk {
   width: 20px;
-  height: 50px;
+  height: 30px;
   display: block;
   margin: auto;
-  background-color: green;
+  background-color: #4A9956;
 }
 
 .leaf {
@@ -18,18 +31,35 @@ body {
 }
 
 .flower {
-  width: 200px;
-  height: 200px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  background-color: pink;
+  background-color: #3c1d0a;
+  border: 35px solid #EDA46D;
+  margin: 10px auto 0;
 }
 
+.pot__position {
+  height: 100px;
+  width: 200px;
+  bottom: 46px;
+  margin: 0 auto;
+  display: block;
+}
 .pot {
-  background-color: brown;
-  border-bottom: 100px solid brown;
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
+  border-top: 120px solid #CB6324;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
   height: 0;
   width: 100px;
-  display: block;
+  position: relative;
+}
+
+.pot-top {
+  border-bottom: 40px solid #CB6324;
+  border-top: 5px solid #3c1d0a;
+  width: 223px;
+  position: relative;
+  left: -11.5px;
+
 }
