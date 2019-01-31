@@ -42,7 +42,10 @@ export default class App extends React.Component {
     this.setState({ totalCount: this.state.totalCount + 1 });
   };
 
+
   render() {
+    const stalks = Array.from({length:9})
+
     return (
       <div>
         <p className="timer"> timer: {this.state.timer}</p>
@@ -51,9 +54,13 @@ export default class App extends React.Component {
         <button onClick={this.pointCounter}>Water Me!</button>
         <div className="container">
           <CloudComp />
+          <div></div>
           <FlowerComp />
           <LeafComp />
-          <StalkComp />
+          {stalks.map((stalk, id) => (
+            <StalkComp id={id} />
+          )
+          )}
           <PlantPotComp />
         </div>
       </div>
