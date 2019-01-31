@@ -57,15 +57,13 @@ export default class App extends React.Component {
       <div>
         <p className="timer"> timer: {this.state.timer}</p>
         <p className="timer"> points: {this.state.totalCount}</p>
-        <p className="timer"> stalks: {this.state.stalks}</p>
         <button onClick={this.start}>Begin</button>
         <button onClick={this.pointCounter}>Water Me!</button>
         <div className="container">
           <CloudComp />
           <div />
-          <FlowerComp />
           <LeafComp />
-          {stalks.map((stalk, id) => (
+          {stalks.reverse().map((stalk, id) => (
             <StalkComp id={id} />
           ))}
           <PlantPotComp />
