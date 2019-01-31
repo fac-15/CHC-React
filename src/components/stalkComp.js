@@ -11,7 +11,15 @@ export default class StalkComp extends React.Component {
   render() {
     return (
       <div>
-  
+        <div className="stalk stalk-0"></div>
+        <div className="stalk stalk-1"></div>
+        <div className="stalk stalk-2"></div>
+        <div className="stalk stalk-3"></div>
+        <div className="stalk stalk-4"></div>
+        <div className="stalk stalk-5"></div>
+        <div className="stalk stalk-6"></div>
+        <div className="stalk stalk-7"></div>
+        <div className="stalk stalk-8"></div>
       </div>
     )
   }
