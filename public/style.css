@@ -11,16 +11,20 @@ body {
   width: 60%;
   height: 600px;
   max-height: 600px;
-  display: block;
   margin: 30px auto;
+  display:flex;
+  flex-direction: column-reverse;
 }
 
+
 .stalk {
+  display: block;
   width: 20px;
   height: 30px;
-  display: block;
   margin: auto;
   background-color: #4A9956;
+  /* flex-direction: column-reverse; */
+
 }
 
 .leaf {
@@ -44,7 +48,9 @@ body {
   width: 200px;
   bottom: 46px;
   margin: 0 auto;
-  display: block;
+  position: fixed;
+
+
 }
 .pot {
   border-top: 120px solid #CB6324;

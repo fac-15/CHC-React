@@ -63,8 +63,8 @@ export default class App extends React.Component {
           <CloudComp />
           <div />
           <LeafComp />
-          {stalks.reverse().map((stalk, id) => (
-            <StalkComp id={id} />
+          {stalks.map((stalk, id) => (
+            <StalkComp key={id} />
           ))}
           <PlantPotComp />
         </div>
