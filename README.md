@@ -8,8 +8,12 @@
 Super Mario
 ---
 > ## Getting Started
-> Install me: ```npm i```
-> Let's Play: ```npm run dev```
+> Clone repo ```master``` 
+
+> Install me: ```npm i``` 
+
+> Let's Play: ```npm run dev``` 
+
 > Where can you view me: ```http://localhost:1234/```
 ---
 # WATER ME!
