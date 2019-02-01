@@ -77,8 +77,6 @@ export default class App extends React.Component {
       <div>
         <ul>
         <li><p className="timer"> timer: {this.state.timer}</p></li>
-
-
         <li>
         <button onClick={this.toggle}>
           {this.state.active ? "Reset" : "Start"}
