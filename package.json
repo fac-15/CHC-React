@@ -7,7 +7,8 @@
     "lint": "eslint src/",
     "test": "jest --watch",
     "dev": "parcel public/index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "scss": "node-sass --watch public//clouds.scss -o public"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +24,7 @@
     "eslint-config-react-minimal": "^1.0.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-react": "^7.12.4",
+    "node-sass": "^4.11.0",
     "parcel-bundler": "^1.11.0"
   },
   "dependencies": {
