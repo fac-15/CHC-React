@@ -1,22 +1,13 @@
-import React from 'react';
+import React from "react";
 // import getFlower from "../utils/getFlower.js";
 
-class FlowerComp extends React.Component {
-  state = {
-    count: 0,
-    visible: false
-  };
-
-
-
-  render() {
-
-    return (
+const FlowerComp = ({ gameOver }) => {
+  return (
       <div>
-        <div className="flower"></div>
+        <div className={gameOver ? "flower" : ""} />
       </div>
-    )
+    );
   }
-}
+
 
 export default FlowerComp;
