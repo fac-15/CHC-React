@@ -5,10 +5,11 @@ import FlowerComp from "./flowerComp";
 import PlantPotComp from "./plantPotComp";
 import CloudComp from "./cloudComp";
 
+
 export default class App extends React.Component {
   state = {
     totalCount: 0,
-    timer: 0,
+    timer: 60,
     timerId: 0,
     opponentTimerId: 0,
     active: false,
@@ -30,7 +31,7 @@ export default class App extends React.Component {
   reset = () => {
     clearInterval(this.state.timerId);
     clearInterval(this.state.opponentTimerId);
-    this.setState({ timer: 0, active: false, totalCount: 0, gameOver: false });
+    this.setState({ timer: 60, active: false, totalCount: 0, gameOver: false });
   };
   toggle = () => {
     if (!this.state.active) {
@@ -43,7 +44,7 @@ export default class App extends React.Component {
   start = () => {
     const timer = () => {
       this.setState(prevState => {
-        return { timer: (prevState.timer += 1) };
+        return { timer: (prevState.timer -= 1) };
       });
     };
 
@@ -82,7 +83,7 @@ export default class App extends React.Component {
           className={this.state.active ? "" : "grey"}
           onClick={this.pointCounter}
         >
-          💧💦 Water Me 💧💦
+          💦💧Water Me💧💦
         </button>
         </li>
         <li><p className="timer float-right"> points: {this.state.totalCount}</p></li>
