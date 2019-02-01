@@ -75,9 +75,11 @@ export default class App extends React.Component {
 
     return (
       <div>
-        <p className="timer"> timer: {this.state.timer}</p>
-        <p className="timer float-right"> points: {this.state.totalCount}</p>
-        <div className="clear" />
+        <ul>
+        <li><p className="timer"> timer: {this.state.timer}</p></li>
+
+
+        <li>
         <button onClick={this.toggle}>
           {this.state.active ? "Reset" : "Start"}
         </button>
@@ -87,6 +89,10 @@ export default class App extends React.Component {
         >
           Water Me!
         </button>
+        </li>
+        <li><p className="timer float-right"> points: {this.state.totalCount}</p></li>
+        <div className="clear" />
+        </ul>
         <div className="container">
           <CloudComp />
           <PlantPotComp />
