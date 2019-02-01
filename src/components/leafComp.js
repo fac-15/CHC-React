@@ -1,19 +1,12 @@
 import React from 'react';
 
-export default class LeafComp extends React.Component {
-  state = {
-    count: 0,
-    toggle: false,
-    timer: 0
-  }
-
-
-  render(){
+const LeafComp = ({id}) => {
   return(
     <div>
-      <div className="leaf" key={this.props.id} id={this.props.id}></div>
+      <div className="leaf" key={id} id={id}></div>
     </div>
   )
 }
 
-}
+
+export default LeafComp

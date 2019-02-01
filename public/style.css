@@ -78,15 +78,29 @@ body {
   display: none;
 }
 
-button {
-  background-color: #eac350;
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  width: 30%;
+  float: left;
+  list-style-type: none;
+}
+li button:last-child {
+  margin-left: 20px;
+}
+
+button{
+  background-color: #EAC350;
   color: black;
-  padding: 20px;
+  padding: 14px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-family: "Press Start 2P", cursive;
-  font-size: 16px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.7rem;
   margin: 4px 2px;
   border: 10px solid #cb6324;
 }

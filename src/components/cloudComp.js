@@ -1,13 +1,7 @@
 import React from 'react';
-import '../../public/clouds.css';
 
-class FlowerComp extends React.Component {
-  state = {
-    count: 0,
-    toggle: false
-  };
+const FlowerComp = () => {
 
-  render() {
     return (
       <div>
         <div className="cloud cloud-0"></div>
@@ -23,6 +17,6 @@ class FlowerComp extends React.Component {
       </div>
     )
   }
-}
+
 
 export default FlowerComp;
