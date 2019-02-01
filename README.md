@@ -4,12 +4,15 @@
 @onwordi @HStewart23 @charlielafosse
 
 ---
->  _Theme_
-Super Mario
+>  _Theme_: ```Super Mario```
 ---
 > ## Getting Started
+> Clone Repo: ```master```
+
 > Install me: ```npm i```
+
 > Let's Play: ```npm run dev```
+
 > Where can you view me: ```http://localhost:1234/```
 ---
 # WATER ME!
@@ -22,7 +25,8 @@ Super Mario
 ## _What is Water me all about?_
 
 ### So...There is an empty flower pot.
-![](https://media.giphy.com/media/PBqkcbPJp6oaQ/giphy.gif)
+![](https://media.giphy.com/media/DsZWjyr4sl52o/giphy.gif)
+
 * User must hit the **Water Me** to continuously water the plant.
 * For every **3 points** a part of the plant stalk will appear 
 * For every **10 points** a leaf will appear on the stalk 
@@ -40,4 +44,11 @@ Super Mario
 * After every **3 seconds** the counter will **-3** from the total points, so the user has be make sure they are clicking with _speed!_
 * If the user does not click the points will eventually all be deducted and the plant will die.
 
+
+## Do we have tests?
+*Yesssss Weee DO!*
+* ✨We check to see if the toggle Start >< Reset functions ✨
+
 # Thanks for Watering Me!
+![](https://media.giphy.com/media/l0MYAs5E2oIDCq9So/giphy.gif)
+
