@@ -1,0 +1,79 @@
+body {
+  background-color: #2a2d43;
+}
+.timer {
+  font-size: 1.3rem;
+  color: #eac350;
+  font-family: "Press Start 2P", cursive;
+  display: inline-block;
+  margin: 10px 20px;
+}
+.clear {
+  clear: both;
+}
+.float-right {
+  float: right;
+}
+
+.container {
+  background-color: #77c2e5;
+  width: 60%;
+  height: 600px;
+  min-width: 400px;
+  max-height: 600px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.stalk {
+  width: 20px;
+  height: 30px;
+  display: block;
+  margin: auto;
+  background-color: #4a9956;
+}
+
+.leaf {
+  width: 50px;
+  height: 25px;
+  border-radius: 100px / 50px;
+  background-color: #2c5b33;
+  margin: auto;
+}
+
+.flower {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #3c1d0a;
+  border: 35px solid #eda46d;
+  margin: 10px auto 0;
+}
+
+.pot__position {
+  width: 170px;
+  bottom: 46px;
+  margin: 0 auto;
+  display: block;
+}
+.pot {
+  border-top: 90px solid #cb6324;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  height: 0;
+  width: 70px;
+  position: relative;
+}
+
+.pot-top {
+  border-bottom: 40px solid #cb6324;
+  border-top: 5px solid #3c1d0a;
+  width: 200px;
+  position: relative;
+  left: -14.5px;
+}
+
+.grey {
+  display: none;
+}
