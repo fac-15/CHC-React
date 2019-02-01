@@ -85,7 +85,7 @@ export default class App extends React.Component {
           className={this.state.active ? "" : "grey"}
           onClick={this.pointCounter}
         >
-          Water Me!
+          💧💦 Water Me 💧💦
         </button>
         <div className="container">
           <CloudComp />
