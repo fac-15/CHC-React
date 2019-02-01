@@ -1,14 +1,14 @@
 body {
-  background-color: #2A2D43;
+  background-color: #2a2d43;
 }
 .timer {
   font-size: 1.3rem;
-  color: #EAC350;
-  font-family: 'Press Start 2P', cursive;
+  color: #eac350;
+  font-family: "Press Start 2P", cursive;
   display: inline-block;
   margin: 10px 20px;
 }
-.clear{
+.clear {
   clear: both;
 }
 .float-right {
@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-  background-color: #77C2E5;
+  background-color: #77c2e5;
   width: 60%;
   height: 600px;
   min-width: 400px;
@@ -31,7 +31,7 @@ body {
   height: 30px;
   display: block;
   margin: auto;
-  background-color: #4A9956;
+  background-color: #4a9956;
 }
 
 .leaf {
@@ -47,7 +47,7 @@ body {
   height: 70px;
   border-radius: 50%;
   background-color: #3c1d0a;
-  border: 35px solid #EDA46D;
+  border: 35px solid #eda46d;
   margin: 10px auto 0;
 }
 
@@ -58,7 +58,7 @@ body {
   display: block;
 }
 .pot {
-  border-top: 90px solid #CB6324;
+  border-top: 90px solid #cb6324;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
   height: 0;
@@ -67,10 +67,13 @@ body {
 }
 
 .pot-top {
-  border-bottom: 40px solid #CB6324;
+  border-bottom: 40px solid #cb6324;
   border-top: 5px solid #3c1d0a;
   width: 200px;
   position: relative;
   left: -14.5px;
+}
 
+.grey {
+  display: none;
 }
