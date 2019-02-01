@@ -95,12 +95,12 @@ li button:last-child {
 button{
   background-color: #EAC350;
   color: black;
-  padding: 14px 15px;
+  padding: 14px 11px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-family: 'Press Start 2P', cursive;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   margin: 4px 2px;
   border: 10px solid #cb6324;
 }
