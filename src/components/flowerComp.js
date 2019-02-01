@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 // import getFlower from "../utils/getFlower.js";
 
-const FlowerComp = () => {
+const FlowerComp = ({ gameOver }) => {
   return (
       <div>
-        <div className="flower"></div>
+        <div className={gameOver ? "flower" : ""} />
       </div>
-    )
+    );
   }
 
 
