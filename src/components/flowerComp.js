@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 // import getFlower from "../utils/getFlower.js";
 
 class FlowerComp extends React.Component {
@@ -7,15 +7,12 @@ class FlowerComp extends React.Component {
     visible: false
   };
 
-
-
   render() {
-
     return (
       <div>
-        <div className="flower"></div>
+        <div className={this.props.gameOver ? "flower" : ""} />
       </div>
-    )
+    );
   }
 }
 

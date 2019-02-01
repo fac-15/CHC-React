@@ -11,7 +11,33 @@ export default class App extends React.Component {
     timer: 0,
     timerId: 0,
     opponentTimerId: 0,
-    active: false
+    active: false,
+    gameOver: false
+  };
+
+  gameOver = () => {
+    this.reset();
+    this.setState(() => {
+      return { gameOver: true };
+    });
+  };
+  pointCounter = () => {
+    if (this.state.totalCount === 29) {
+      this.gameOver();
+    }
+    this.setState({ totalCount: this.state.totalCount + 1 });
+  };
+  reset = () => {
+    clearInterval(this.state.timerId);
+    clearInterval(this.state.opponentTimerId);
+    this.setState({ timer: 0, active: false, totalCount: 0, gameOver: false });
+  };
+  toggle = () => {
+    if (!this.state.active) {
+      this.start();
+    } else {
+      this.reset();
+    }
   };
 
   start = () => {
@@ -34,36 +60,7 @@ export default class App extends React.Component {
         return { active: true, timerId: id, opponentTimerId: oppId };
       });
     }
-
-    // if(this.state.active == true && this.state.totalCount == 29) {
-    //   this.componentWillUpdate(() => {
-    //     console.log('IVE WON!!!');
-    //   })
-    //
-    // }
   };
-  pointCounter = () => {
-    this.setState({ totalCount: this.state.totalCount + 1 });
-  };
-  reset = () => {
-    clearInterval(this.state.timerId);
-    clearInterval(this.state.opponentTimerId);
-    this.setState({ timer: 0, active: false, totalCount: 0 });
-  };
-  toggle = () => {
-    if (!this.state.active) {
-      this.start();
-    } else {
-      this.reset();
-    }
-  };
-
-  // flowerBlowm = () => {
-  //   if(this.state.active === true && this.state.totalCount === 29) {
-  //     this.setState({ flower: this.state.flower + 1 })
-  //     console.log('FLOWER');
-  //   }
-  // }
 
   render() {
     const stalks = Array.from({
@@ -79,7 +76,7 @@ export default class App extends React.Component {
         <p className="timer float-right"> points: {this.state.totalCount}</p>
         <div className="clear" />
         <button onClick={this.toggle}>
-          {this.state.active ? "Reset" : "Start"}
+          {this.state.active || this.state.gameOver ? "Reset" : "Start"}
         </button>
         <button
           className={this.state.active ? "" : "grey"}
@@ -96,7 +93,7 @@ export default class App extends React.Component {
           {leafs.map((leaf, id) => (
             <LeafComp id={id} />
           ))}
-          <FlowerComp />
+          <FlowerComp gameOver={this.state.gameOver} />
         </div>
       </div>
     );
