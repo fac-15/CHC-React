@@ -7,9 +7,6 @@ import CloudComp from "./cloudComp";
 
 export default class App extends React.Component {
   state = {
-    stalks: 0,
-    leafs: 0,
-    flower: 0,
     totalCount: 0,
     timer: 0,
     timerId: 0,
@@ -38,20 +35,27 @@ export default class App extends React.Component {
       });
     }
 
-
-
     // if(this.state.active == true && this.state.totalCount == 29) {
     //   this.componentWillUpdate(() => {
     //     console.log('IVE WON!!!');
     //   })
     //
     // }
-
-
-
   };
   pointCounter = () => {
     this.setState({ totalCount: this.state.totalCount + 1 });
+  };
+  reset = () => {
+    clearInterval(this.state.timerId);
+    clearInterval(this.state.opponentTimerId);
+    this.setState({ timer: 0, active: false, totalCount: 0 });
+  };
+  toggle = () => {
+    if (!this.state.active) {
+      this.start();
+    } else {
+      this.reset();
+    }
   };
 
   // flowerBlowm = () => {
@@ -69,23 +73,28 @@ export default class App extends React.Component {
       length: Math.floor(this.state.totalCount / 10)
     });
 
-
-
     return (
       <div>
         <p className="timer"> timer: {this.state.timer}</p>
         <p className="timer float-right"> points: {this.state.totalCount}</p>
-        <div className="clear"></div>
-        <button onClick={this.start}>Begin</button>
-        <button onClick={this.pointCounter}>Water Me!</button>
+        <div className="clear" />
+        <button onClick={this.toggle}>
+          {this.state.active ? "Reset" : "Start"}
+        </button>
+        <button
+          className={this.state.active ? "" : "grey"}
+          onClick={this.pointCounter}
+        >
+          Water Me!
+        </button>
         <div className="container">
           <CloudComp />
           <PlantPotComp />
           {stalks.map((stalk, id) => (
             <StalkComp id={id} />
           ))}
-          {leafs.map((leaf, id) =>(
-            <LeafComp id={id}/>
+          {leafs.map((leaf, id) => (
+            <LeafComp id={id} />
           ))}
           <FlowerComp />
         </div>
