@@ -5,10 +5,11 @@ import FlowerComp from "./flowerComp";
 import PlantPotComp from "./plantPotComp";
 import CloudComp from "./cloudComp";
 
+
 export default class App extends React.Component {
   state = {
     totalCount: 0,
-    timer: 0,
+    timer: 60,
     timerId: 0,
     opponentTimerId: 0,
     active: false
@@ -17,7 +18,7 @@ export default class App extends React.Component {
   start = () => {
     const timer = () => {
       this.setState(prevState => {
-        return { timer: (prevState.timer += 1) };
+        return { timer: (prevState.timer -= 1) };
       });
     };
 
@@ -35,20 +36,15 @@ export default class App extends React.Component {
       });
     }
 
-    // if(this.state.active == true && this.state.totalCount == 29) {
-    //   this.componentWillUpdate(() => {
-    //     console.log('IVE WON!!!');
-    //   })
-    //
-    // }
   };
   pointCounter = () => {
     this.setState({ totalCount: this.state.totalCount + 1 });
   };
+
   reset = () => {
     clearInterval(this.state.timerId);
     clearInterval(this.state.opponentTimerId);
-    this.setState({ timer: 0, active: false, totalCount: 0 });
+    this.setState({ timer: 60, active: false, totalCount: 0 });
   };
   toggle = () => {
     if (!this.state.active) {
@@ -58,12 +54,11 @@ export default class App extends React.Component {
     }
   };
 
-  // flowerBlowm = () => {
-  //   if(this.state.active === true && this.state.totalCount === 29) {
-  //     this.setState({ flower: this.state.flower + 1 })
-  //     console.log('FLOWER');
-  //   }
-  // }
+  // fetchData = username => {
+  //    const url = `${API_URL}/users/${username}`;
+  //
+  //    getData(url).then(data => this.setState({ data }));
+  //  };
 
   render() {
     const stalks = Array.from({
