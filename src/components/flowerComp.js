@@ -7,10 +7,9 @@ class FlowerComp extends React.Component {
     visible: false
   };
 
+
+
   render() {
-    // if(!this.state.visible) {
-    //
-    // }
 
     return (
       <div>
