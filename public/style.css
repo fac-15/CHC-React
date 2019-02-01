@@ -5,14 +5,25 @@ body {
   font-size: 1.3rem;
   color: #EAC350;
   font-family: 'Press Start 2P', cursive;
+  display: inline-block;
+  margin: 10px 20px;
 }
+.clear{
+  clear: both;
+}
+.float-right {
+  float: right;
+}
+
 .container {
   background-color: #77C2E5;
   width: 60%;
   height: 600px;
+  min-width: 400px;
   max-height: 600px;
-  display: block;
   margin: 30px auto;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .stalk {
@@ -27,7 +38,8 @@ body {
   width: 50px;
   height: 25px;
   border-radius: 100px / 50px;
-  background-color: yellow;
+  background-color: #2c5b33;
+  margin: auto;
 }
 
 .flower {
@@ -40,26 +52,25 @@ body {
 }
 
 .pot__position {
-  height: 100px;
-  width: 200px;
+  width: 170px;
   bottom: 46px;
   margin: 0 auto;
   display: block;
 }
 .pot {
-  border-top: 120px solid #CB6324;
+  border-top: 90px solid #CB6324;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
   height: 0;
-  width: 100px;
+  width: 70px;
   position: relative;
 }
 
 .pot-top {
   border-bottom: 40px solid #CB6324;
   border-top: 5px solid #3c1d0a;
-  width: 223px;
+  width: 200px;
   position: relative;
-  left: -11.5px;
+  left: -14.5px;
 
 }

@@ -13,6 +13,7 @@ class PlantPotComp extends React.Component {
           <div className="pot-top"></div>
           <div className="pot"></div>
         </div>
+        <div className="clear"></div>
       </div>
     )
   }

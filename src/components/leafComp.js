@@ -2,18 +2,18 @@ import React from 'react';
 
 export default class LeafComp extends React.Component {
   state = {
-    count : 667,
-    toggle: false
+    count: 0,
+    toggle: false,
+    timer: 0
   }
+
+
   render(){
-
-    // if (this.state.count === App.state.count){
-    //   this.setState({ toggle: true });
-    // }
-    //
-
   return(
-    <div> </div> 
+    <div>
+      <div className="leaf" key={this.props.id} id={this.props.id}></div>
+    </div>
   )
 }
+
 }
