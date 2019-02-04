@@ -1,9 +1,11 @@
 # CHC-React
 
-## Week 12 React Project
+## Week 13 React Project
 @onwordi @HStewart23 @charlielafosse
 
 ---
+> App Name: ```Water Me```
+
 >  _Theme_: ```Super Mario```
 ---
 > ## Getting Started
@@ -15,7 +17,7 @@
 
 > Where can you view me: ```http://localhost:1234/```
 ---
-# WATER ME!
+# WATER ME! 
 ![](https://media.giphy.com/media/xT9DPhySvCRg3nuTqU/giphy.gif)
 
 
